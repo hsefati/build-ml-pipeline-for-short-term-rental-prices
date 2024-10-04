@@ -4,31 +4,29 @@ conda_env: conda.yml
 entry_points:
   main:
     parameters:
-
       input_artifact:
-        description: ## ADD DESCRIPTION
+        description: name of the input artifact
         type: string
 
       output_artifact:
-        description: ## ADD DESCRIPTION
+        description: name of the output artifact ( it is used in W&B)
         type: string
 
       output_type:
-        description: ## ADD DESCRIPTION
+        description: Type of output artifact
         type: string
 
       output_description:
-        description: ## ADD DESCRIPTION
+        description: Description of the output artifact
         type: string
 
       min_price:
-        description: ## ADD DESCRIPTION
+        description: Minimun price for the output artifact
         type: string
 
       max_price:
-        description: ## ADD DESCRIPTION
+        description: Maximum price for the output artifact
         type: string
 
-
     command: >-
-        python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price} 
+      python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price}
